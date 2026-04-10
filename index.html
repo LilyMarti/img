@@ -183,6 +183,49 @@
     background: #f8fafc;
     transform: translateX(5px);
 }
+.cert-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #e9ecef;
+}
+
+.cert-summary {
+    padding: 20px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+}
+
+.cert-summary::-webkit-details-marker {
+    display: none;
+}
+
+.cert-summary::after {
+    content: '▼';
+    color: #ff6b35;
+    transition: transform 0.3s;
+}
+
+details[open] .cert-summary::after {
+    transform: rotate(180deg);
+}
+
+.detail-content {
+    padding: 0 20px 20px 20px;
+}
+
+.cert-img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
     </style>
 </head>
 <body>
@@ -296,33 +339,51 @@
             </div>
    
         </section>
-     <section class="section">
-            <h2>📜 技能证书</h2>
-            <div class="cert-grid">
-                <div class="cert-card cert-highlight">
-            
-                    <div class="cert-info">
-                       <a href="RHCSA.jpg"> <h3>红帽认证系统管理员 (RHCSA)</h3></a>
-                        <p>获证时间：2024.10</p>
-                    </div>
-                </div>
-                <div class="cert-card">
-                 
-                    <div class="cert-info">
-                        <h3>中华人民共和国机动车驾驶证 (C1)</h3>
-                        <p>获证时间：2024.05</p>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                  
-                    <div class="cert-info">
-                       <a href="HuaWei.jpg"> <h3>HarmonyOS应用开发者高级认证</h3></a>
-                        <p>获证时间：2024.06</p>
-                    </div>
-                </div>
+    <section class="section">
+    <h2>📜 技能证书</h2>
+    
+    <details class="cert-card">
+        <summary class="cert-summary">
+            <div>
+                <h3>红帽认证系统管理员 (RHCSA)</h3>
+                <p>获证时间：2024.10</p>
             </div>
-        </section>
+        </summary>
+        <div class="detail-content">
+            <img src="RHCSA.jpg" alt="RHCSA证书" class="cert-img">
+            <p>红帽企业Linux系统管理认证，掌握系统管理、网络配置、安全策略等核心技能</p>
+            <a href="RHCSA.jpg" target="_blank">查看完整证书 →</a>
+        </div>
+    </details>
+
+    <details class="cert-card">
+        <summary class="cert-summary">
+            <div>
+                <h3>中华人民共和国机动车驾驶证 (C1)</h3>
+                <p>获证时间：2024.05</p>
+            </div>
+        </summary>
+        <div class="detail-content">
+            <img src="driving_license.jpg" alt="驾驶证" class="cert-img">
+            <p>准驾车型：小型汽车、小型自动挡汽车</p>
+            <a href="driving_license.jpg" target="_blank">查看完整证书 →</a>
+        </div>
+    </details>
+
+    <details class="cert-card">
+        <summary class="cert-summary">
+            <div>
+                <h3>HarmonyOS应用开发者高级认证</h3>
+                <p>获证时间：2024.06</p>
+            </div>
+        </summary>
+        <div class="detail-content">
+            <img src="HuaWei.jpg" alt="鸿蒙证书" class="cert-img">
+            <p>华为官方认证高级开发者，掌握鸿蒙应用开发、分布式技术等核心能力</p>
+            <a href="HuaWei.jpg" target="_blank">查看完整证书 →</a>
+        </div>
+    </details>
+</section>
 
 
               <section class="section">
